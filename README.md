@@ -1,6 +1,6 @@
 # react-table
 <p>
-  Necessary Functionality including Sorting , Global Filtering (asyn Bounce with Timeout after keystroke to improve page performance),Pagination for client-side
+  Necessary Functionality including <strong>Sorting</strong> , <strong>Global Filtering (asyn Bounce with Timeout after keystroke to improve page performance)</strong>,<strong>Pagination for client-side</strong>
 </p>
 
 <p>
