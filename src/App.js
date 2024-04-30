@@ -6,6 +6,8 @@ import T03Basictable from "./Components/T03Basictable";
 import T04Basictable from "./Components/T04Basictable";
 import T05Basictable from "./Components/T05Basictable";
 import { Tabs, Tab, Nav } from "react-bootstrap";
+import QRcodegenerator from "./Components/QRCode/QRcodegenerator";
+import WebComeT from "./Components/webcam/WebComeT";
 
 function App() {
   const Links = [
@@ -25,9 +27,19 @@ function App() {
     {
       title: "Global Filtering",
       com: <T04Basictable />,
-    },  {
+    },
+    {
       title: "Pagination",
-      com: <T05Basictable/>,
+      com: <T05Basictable />,
+    },
+    {
+      title: "QRCode",
+      com: <QRcodegenerator />,
+    },
+
+    {
+      title: "webcome",
+      com: <WebComeT />,
     },
   ];
   const [Tkey, setTkey] = useState(Links[0].title);

@@ -4,7 +4,7 @@ export const COLUMN = [
     Footer: "id",
     accessor: "id",
     Cell: ({ value }) => {
-      return value.split("-")[0];
+      return value;
     },
   },
   {
