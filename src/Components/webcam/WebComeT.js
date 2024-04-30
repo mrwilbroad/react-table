@@ -4,7 +4,15 @@ import { Button } from "react-bootstrap";
 const videoConstraints = {
   width: 1280,
   height: 720,
-  facingMode: "user",
+  facingMode: "environment",
+};
+
+const videoConstraints_twi = {
+  width: 1280,
+  height: 720,
+  facingMode: {
+    exact: "environment",
+  },
 };
 
 const WebComeT = () => {
@@ -19,8 +27,6 @@ const WebComeT = () => {
           height: "200px",
         }}
       >
-      
-
         <Webcam
           // audio={true}
           height={200}
@@ -38,10 +44,9 @@ const WebComeT = () => {
                   setImgSrc([
                     ...imgSr,
                     {
-                      src : imgSrc
-                    }
-                  ])
-                    
+                      src: imgSrc,
+                    },
+                  ]);
                 }}
               >
                 capture photo
@@ -50,16 +55,17 @@ const WebComeT = () => {
           }}
         </Webcam>
 
-
-      <section className="mt-3">
-      {imgSr.length > 0 && (
-          <section className="border p-3 d-sm-flex gap-2">
-            {imgSr.map((im) => (
-              <img src={im.src} alt="Image of student" />
-            ))}
-          </section>
-        )}
-      </section>
+        <section className="mt-3">
+          {imgSr.length > 0 && (
+            <section className="border p-3 justify-content-center row gap-2 bg">
+              {imgSr.map((im, index) => (
+                 <section key={index} className="col-lg-3 ">
+                   <img  src={im.src} alt="Image of student" />
+                  </section>
+              ))}
+            </section>
+          )}
+        </section>
       </section>
     </div>
   );
